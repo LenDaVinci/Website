@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  @font-face{
+    font-family: 'glacialIndifference';
+    src: url(./assets/glacial-indifference.regular.otf) format('otf')
+  }
+}
