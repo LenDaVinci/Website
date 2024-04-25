@@ -10,7 +10,8 @@ import MessagePage from './pages/MessagePage.vue';
 const routes = [
     { path: '/', component: HomePage },
     { path: '/trip', component: TripPage },
-    { path: '/messages/:id', component: MessagePage }
+    { path: '/messages/:id', component: MessagePage },
+    { path: '/Website', redirect: '/' },
 ]
 
 const router = createRouter({
