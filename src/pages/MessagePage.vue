@@ -1,5 +1,7 @@
 <script setup>
     import mockdata from '../../mockdata.json'
+    import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel' 
+    import 'vue3-carousel/dist/carousel.css'
 
     const returnDiv = document.createElement('div')
 
@@ -19,4 +21,56 @@
 <template>
     <h1 class="text-3xl text-black text-center mt-4">Berichtje van {{ mockdata[$route.params.id].naam }}</h1>
     <div id="content" class="mx-48 my-8 text-black leading-relaxed font-glacialIndifference">{{ getContent(mockdata[$route.params.id].content) }}</div>
+    <div v-if="mockdata[$route.params.id].fotos.length > 0" >
+        <h2 class="text-2xl text-black text-center mt-4 my-16">Foto's</h2>
+        <Carousel :items-to-show="mockdata[$route.params.id].fotos.length > 5 ? 5 : mockdata[$route.params.id].fotos.length" :autoplay="5000" :wrap-around="mockdata[$route.params.id].fotos.length > 1 ? true : false" class="mx-48" > 
+            <Slide v-for="picture in mockdata[$route.params.id].fotos" :key="picture.id">
+                <div  class="carousel__item">
+                    <a :href="picture.picturesource" target="_blank"><img class="max-h-96" :src="picture.picturesource" /></a>
+                </div>
+            </Slide>
+            <!-- TODO: if anyone has 1 photo, make this work properly, REALLY IMPORTANT OTHERWISE ITS REALLY UGLY -->
+            <template #addons v-if="mockdata[$route.params.id].fotos.length > 1? true : false">
+                <Navigation />
+                <Pagination />
+            </template>
+        </Carousel>
+    </div>
 </template>
+<style scoped>
+.carousel__slide {
+    padding: 0px;
+    opacity: 0.9;
+    transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__viewport {
+    perspective: 2000px;
+}
+
+.carousel__track {
+    transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+    transition: 0.5s
+}
+
+.carousel__slide--active ~ .carousel__slide {
+    transform: rotateY(20deg) scale(0.9);
+}
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1.1);
+}
+</style>
