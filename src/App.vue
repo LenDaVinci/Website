@@ -25,12 +25,12 @@
 
 <template>
   <header class="h-12 px-8 align-center inline-flex sticky top-0 bg-white w-full shadow-md">
-    <RouterLink to="/">
+    <RouterLink to="/Website">
       <p class="font-bold p-3 mr-12 text-[#8d6f57] ">Pauline 18</p>
     </RouterLink>
     <ul class="inline-flex">
-      <li class="mx-6 p-3"><RouterLink to="/">Home</RouterLink></li>  
-      <li class="mx-6 p-3"><RouterLink to="/trip">Uitje</RouterLink></li> 
+      <li class="mx-6 p-3"><RouterLink to="/Website">Home</RouterLink></li>  
+      <li class="mx-6 p-3"><RouterLink to="/Website/trip">Uitje</RouterLink></li> 
       <li class="mx-6 p-3" >  
         <button id="dropdownButton" @mousedown="clickFunction">Berichtjes
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" id="dropdownchevron" class="bi bi-chevron-down inline transition-all" viewBox="0 0 16 16">
@@ -39,14 +39,14 @@
         </button>
         <div id="dropdown" class="absolute z-10 mt-4 max-w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" :class="{hidden : isHidden} ">  
           <ul> 
-            <li class="hover:bg-gray-100 px-4 pt-1 rounded-t-md"><RouterLink to="/messages/1">{{ mockdata[1].naam }}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/messages/2">{{mockdata[2].naam}}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/messages/3">{{mockdata[3].naam}}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/messages/4">{{mockdata[4].naam}}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/messages/5">{{mockdata[5].naam}}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/messages/6">{{mockdata[6].naam}}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/messages/7">{{mockdata[7].naam}}</RouterLink></li>
-            <li class="hover:bg-gray-100 px-4 pb-1 rounded-b-md"><RouterLink to="/messages/8">{{ mockdata[8].naam }}</RouterLink></li> 
+            <li class="hover:bg-gray-100 px-4 pt-1 rounded-t-md"><RouterLink to="/Website/messages/1">{{ mockdata[1].naam }}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/Website/messages/2">{{mockdata[2].naam}}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/Website/messages/3">{{mockdata[3].naam}}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/Website/messages/4">{{mockdata[4].naam}}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/Website/messages/5">{{mockdata[5].naam}}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/Website/messages/6">{{mockdata[6].naam}}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 "><RouterLink to="/Website/messages/7">{{mockdata[7].naam}}</RouterLink></li>
+            <li class="hover:bg-gray-100 px-4 pb-1 rounded-b-md"><RouterLink to="/Website/messages/8">{{ mockdata[8].naam }}</RouterLink></li> 
           </ul>
         </div>
       </li>
