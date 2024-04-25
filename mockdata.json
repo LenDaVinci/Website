@@ -2,7 +2,7 @@
     "1":{
             "naam":"Dit is aangepaste tekst",
             "content":"Hey hallo, dikke gefeliciteerd",
-            "fotos" : [{"picturesource":"../assets/images/lp1.jpeg"}]
+            "fotos" : []
         },
     "2":{
             "naam":"Langere naam die mogelijk eventjes moet wrappen", 
