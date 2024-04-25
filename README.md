@@ -7,4 +7,4 @@ npm run dev
 ```   
 Dan wordt ie getoond op localhost:5173.
 
-Of je laat me eerst even de hosting regelen, dan kun je hem zien via het linkje wat ik hier zal linken als hij bestaat.
+Of bekijk m op de gehoste site <a href="https://lendavinci.github.io/Website/">die staat hier</a>.
