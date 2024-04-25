@@ -18,5 +18,5 @@
 </script>
 <template>
     <h1 class="text-3xl text-black text-center mt-4">Berichtje van {{ mockdata[$route.params.id].naam }}</h1>
-    <div id="content" class="mx-48 my-8 text-black leading-relaxed">{{ getContent(mockdata[$route.params.id].content) }}</div>
+    <div id="content" class="mx-48 my-8 text-black leading-relaxed font-glacialIndifference">{{ getContent(mockdata[$route.params.id].content) }}</div>
 </template>
