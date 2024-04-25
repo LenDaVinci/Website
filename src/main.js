@@ -8,10 +8,9 @@ import TripPage from './pages/TripPage.vue';
 import MessagePage from './pages/MessagePage.vue';
 
 const routes = [
-    { path: '/', component: HomePage },
-    { path: '/trip', component: TripPage },
-    { path: '/messages/:id', component: MessagePage },
-    { path: '/Website', redirect: '/' },
+    { path: '/Website', component: HomePage },
+    { path: '/Website/trip', component: TripPage },
+    { path: '/Website/messages/:id', component: MessagePage },
 ]
 
 const router = createRouter({
