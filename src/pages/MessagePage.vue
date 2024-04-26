@@ -1,5 +1,5 @@
 <script setup>
-    import mockdata from '../../mockdata.json'
+    import data from '../../data.json'
     import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel' 
     import 'vue3-carousel/dist/carousel.css'
 
@@ -11,7 +11,7 @@
         const paragraphArray = base.split('{././}')
         for (let i = 0; i < paragraphArray.length; i++) {
             const paragraph = paragraphArray[i]
-            returnDiv.innerHTML += `${paragraph}<br>`
+            returnDiv.innerHTML += `${paragraph}<br><br>`
         }
         setTimeout(() => {
             document.getElementById('content').innerHTML = returnDiv.innerHTML
@@ -19,20 +19,20 @@
     }
 </script>
 <template>
-    <h1 class="text-3xl text-black text-center mt-4">Berichtje van {{ mockdata[$route.params.id].naam }}</h1>
-    <div id="content" class="mx-48 my-8 text-black leading-relaxed font-glacialIndifference">{{ getContent(mockdata[$route.params.id].content) }}</div>
-    <div v-if="mockdata[$route.params.id].fotos.length > 0" >
-        <h2 class="text-2xl text-black text-center mt-4 my-16">Foto's</h2>
-        <Carousel :items-to-show="mockdata[$route.params.id].fotos.length > 5 ? 5 : mockdata[$route.params.id].fotos.length" :autoplay="5000" :wrap-around="mockdata[$route.params.id].fotos.length > 1 ? true : false" class="mx-48" > 
-            <Slide v-for="picture in mockdata[$route.params.id].fotos" :key="picture.id">
+    <h1 class="text-3xl text-black text-center mt-4">Berichtje van {{ data[$route.params.id].naam }}</h1>
+    <div id="content" class="mx-48 my-8 text-black leading-relaxed font-glacialIndifference">{{ getContent(data[$route.params.id].content) }}</div>
+    <div v-if="data[$route.params.id].fotos.length > 0" >
+        <h2 class="text-2xl text-black text-center mt-4 my-16">Foto{{data[$route.params.id].fotos.length > 1 ? '\'s' : ''}}</h2>
+        <Carousel title="Klik op een foto om hem groter te tonen!" :items-to-show="data[$route.params.id].fotos.length > 6 ? 5 : data[$route.params.id].fotos.length > 1? data[$route.params.id].fotos.length-1 : 1" :autoplay="5000" :wrap-around="data[$route.params.id].fotos.length > 1 ? true : false" class="mx-48" >  
+            <Slide v-for="picture in data[$route.params.id].fotos" :key="picture.id">
                 <div  class="carousel__item">
                     <a :href="picture.picturesource" target="_blank"><img class="max-h-96" :src="picture.picturesource" /></a>
                 </div>
             </Slide>
             <!-- TODO: if anyone has 1 photo, make this work properly, REALLY IMPORTANT OTHERWISE ITS REALLY UGLY -->
-            <template #addons v-if="mockdata[$route.params.id].fotos.length > 1? true : false">
-                <Navigation />
-                <Pagination />
+            <template #addons>
+                <Navigation v-if="data[$route.params.id].fotos.length > 1" />
+                <Pagination v-if="data[$route.params.id].fotos.length > 1" />
             </template>
         </Carousel>
     </div>
