@@ -4,8 +4,8 @@ module.exports = {
   theme:  {
       extend: {
         backgroundImage: {
-          'bgimg': 'url("../assets/images/lp1.jpeg")',
-          'gentimg': 'url("../assets/images/gent.png")'
+          'bgimg': 'url("./assets/images/lp1.jpeg")',
+          'gentimg': 'url("./assets/images/gent.png")'
         },
         fontFamily: {
           glacialIndifference: ["glacialIndiffernce", "sans-serif"]
