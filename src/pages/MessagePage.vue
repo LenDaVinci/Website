@@ -29,7 +29,6 @@
                     <a :href="picture.picturesource" target="_blank"><img class="max-h-96" :src="picture.picturesource" /></a>
                 </div>
             </Slide>
-            <!-- TODO: if anyone has 1 photo, make this work properly, REALLY IMPORTANT OTHERWISE ITS REALLY UGLY -->
             <template #addons>
                 <Navigation v-if="data[$route.params.id].fotos.length > 1" />
                 <Pagination v-if="data[$route.params.id].fotos.length > 1" />
