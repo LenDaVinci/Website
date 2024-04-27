@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <header class="m:h-12 px-8 align-center inline-flex sticky top-0 bg-white w-full shadow-md z-10 m:text-md text-xl"> 
+  <header class=" px-8 align-center inline-flex sticky top-0 bg-white w-full shadow-md z-10 m:text-lg text-xl"> 
     <RouterLink to="/Website">
       <p class="font-bold p-3 mr-12 text-[#8d6f57] ">Pauline 18</p>
     </RouterLink>
