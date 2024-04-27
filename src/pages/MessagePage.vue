@@ -26,7 +26,7 @@
         <Carousel title="Klik op een foto om hem groter te tonen!" :items-to-show="data[$route.params.id].fotos.length > 6 ? 5 : data[$route.params.id].fotos.length > 1? data[$route.params.id].fotos.length-1 : 1" :autoplay="5000" :wrap-around="data[$route.params.id].fotos.length > 1 ? true : false" class="m:mx-48 mx-8" >  
             <Slide v-for="picture in data[$route.params.id].fotos" :key="picture.id">
                 <div  class="carousel__item">
-                    <a :href="picture.picturesource" target="_blank"><img :src="picture.picturesource" /></a>
+                    <a :href="picture.picturesource" target="_blank"><img class="max-h-96 mb-8" :src="picture.picturesource" /></a>
                 </div>
             </Slide>
             <template #addons>
