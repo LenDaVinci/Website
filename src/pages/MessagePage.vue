@@ -20,13 +20,13 @@
 </script>
 <template>
     <h1 class="text-3xl text-black text-center mt-4">Berichtje van {{ data[$route.params.id].naam }}</h1>
-    <div id="content" class="mx-48 my-8 text-black leading-relaxed font-glacialIndifference">{{ getContent(data[$route.params.id].content) }}</div>
+    <div id="content" class="m:mx-48 mx-20 my-8 text-black text-md m:leading-relaxed font-glacialIndifference">{{ getContent(data[$route.params.id].content) }}</div>
     <div v-if="data[$route.params.id].fotos.length > 0" >
         <h2 class="text-2xl text-black text-center mt-4 my-16">Foto{{data[$route.params.id].fotos.length > 1 ? '\'s' : ''}}</h2>
-        <Carousel title="Klik op een foto om hem groter te tonen!" :items-to-show="data[$route.params.id].fotos.length > 6 ? 5 : data[$route.params.id].fotos.length > 1? data[$route.params.id].fotos.length-1 : 1" :autoplay="5000" :wrap-around="data[$route.params.id].fotos.length > 1 ? true : false" class="mx-48" >  
+        <Carousel title="Klik op een foto om hem groter te tonen!" :items-to-show="data[$route.params.id].fotos.length > 6 ? 5 : data[$route.params.id].fotos.length > 1? data[$route.params.id].fotos.length-1 : 1" :autoplay="5000" :wrap-around="data[$route.params.id].fotos.length > 1 ? true : false" class="m:mx-48 mx-8" >  
             <Slide v-for="picture in data[$route.params.id].fotos" :key="picture.id">
                 <div  class="carousel__item">
-                    <a :href="picture.picturesource" target="_blank"><img class="max-h-96" :src="picture.picturesource" /></a>
+                    <a :href="picture.picturesource" target="_blank"><img :src="picture.picturesource" /></a>
                 </div>
             </Slide>
             <template #addons>

@@ -2,6 +2,10 @@
 module.exports = {
   content: ['./index.html', './src/main.js', "./src/**/*.{vue,js,ts,jsx,tsx}",],
   theme:  {
+    screens: {
+      'm': '768px',
+      
+    },
       extend: {
         backgroundImage: {
           'bgimg': 'url("./assets/images/lp1.jpeg")',

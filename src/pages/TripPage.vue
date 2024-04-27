@@ -4,7 +4,7 @@
     <div class="bg-gentimg bg-fixed bg-center bg-cover h-tripimg p-8">  
     </div> 
     <h1 class="text-3xl text-black text-center">Dagje Gent</h1>
-    <p class="mx-48 my-8 text-black font-glacialIndifference">
+    <p class="m:mx-48 mx-20 my-8 text-black font-glacialIndifference">
         Pau,<br>
         Op deze speciale dag wil ik je verrassen met een dagje weg naar Gent, bekend om zijn charme, romantiek en bloemen!<br>
         De bloemenmarkt van Gent tussen de middeleeuwse gebouwen is een prachtige combinatie van kleur en vrolijkheid en dat past helemaal bij jou!<br>
