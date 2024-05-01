@@ -12,7 +12,7 @@ module.exports = {
           'gentimg': 'url("./assets/images/gent.png")'
         },
         fontFamily: {
-          glacialIndifference: ["glacialIndiffernce", "sans-serif"]
+          glacialIndifference: ["glacialIndifference", "sans-serif"]
         },
         colors :{
           'textcolor': '#f1e5d9',
